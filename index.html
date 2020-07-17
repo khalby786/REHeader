@@ -23,14 +23,16 @@
       <br><br>
 
       <center>
-        <span class="color">Background color: <input type="color" placeholder="Background color" :value="background" id="background" @change="updateBackground"></span><br><br>
-        <span class="color">Text color: <input type="color" placeholder="Text color" :value="color" id="color" @change="updateColor"></span><br><br>
-        <input id="name" type="text" placeholder="Your name here" v-model="username" @keyup="updateCanvas">
+        <span class="color">Intro text color: <input type="color" placeholder="Intro text color" :value="introcolor" id="introcolor" @change="updateIntroColor" /></span><br><br>
+        <input id="introtext" type="text" placeholder="Intro text" v-model="introtext" @keyup="updateCanvas" /><br><br>
+        <span class="color">Background color: <input type="color" placeholder="Background color" :value="background" id="background" @change="updateBackground" /></span><br><br>
+        <span class="color">Text color: <input type="color" placeholder="Text color" :value="color" id="color" @change="updateColor" /></span><br><br>
+        <input id="name" type="text" placeholder="Your name here" v-model="username" @keyup="updateCanvas" />
       </center>
       
-      {{color}}
-
       <br><br>
+      
+      <
 
       <div id="canvas-wrap">
         <canvas id="preview" width="1000px" height="300px"></canvas>

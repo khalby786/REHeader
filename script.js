@@ -4,7 +4,9 @@ var app = new Vue({
     return {
       color: "#1c1c1b",
       background: "#fcfcfc",
-      username: "Octocat"
+      username: "Octocat",
+      introcolor: "#1c1c1b",
+      introtext: "Hi 👋, I'm"
     }
   },
   methods: {
@@ -14,14 +16,15 @@ var app = new Vue({
 
       let x = 70;
       let y = 120;
-
+      
       ctx.fillStyle = this.background;
       ctx.fillRect(0, 0, c.width, c.height);
 
-      ctx.fillStyle = this.color;
+      ctx.fillStyle = this.introcolor;
       ctx.font = "40px Arial";
-      ctx.fillText("Hi 👋, I'm", x, y);
-
+      ctx.fillText(this.introtext, x, y);
+      
+      ctx.fillStyle = this.color;
       ctx.font = "bold 70px Arial";
       ctx.fillText(this.username, x-3, y+70);
     },
@@ -29,7 +32,10 @@ var app = new Vue({
       this.color = document.getElementById("color").value;
     },
     updateBackground() {
-      this.color = document.getElementById("background").value;
+      this.background = document.getElementById("background").value;
+    },
+    updateIntroColor() {
+      this.introcolor = document.getElementById("introcolor").value;
     }
   }
 })
