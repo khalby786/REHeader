@@ -1,4 +1,5 @@
 var app = new Vue({
+  el: '#app',
   data: function() {
     return {
       color: "black",
@@ -14,7 +15,7 @@ var app = new Vue({
       let x = 70;
       let y = 120;
 
-      ctx.fillStyle = "pink";
+      ctx.fillStyle = this.background;
       ctx.fillRect(0, 0, c.width, c.height);
 
       ctx.fillStyle = "black";
@@ -22,8 +23,11 @@ var app = new Vue({
       ctx.fillText("Hi 👋, I'm", x, y);
 
       ctx.font = "bold 70px Arial";
-      ctx.fillText("Khaleel Gibran 🍩", x-3, y+70);
+      ctx.fillText(this.username, x-3, y+70);
     }
+  },
+  created: function() {
+    this.updateCanvas();
   }
 })
 

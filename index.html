@@ -7,40 +7,42 @@
 
     <title>Hello!</title>
     
-    <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css">
     
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/script.js"></script>
   </head>  
   <body>
+    <div id="app">
+  
+      <h1>
+        GitHub Profile README <br> Header Image Generator
+      </h1>
+
+      <p style="text-align: center;">
+        Generate header images for your GitHub profile READMEs.
+      </p>
+
+      <br><br>
+
+      <center>
+        <span class="color">Background color: <input type="color" placeholder="Background color"></span><br><br>
+        <span class="color">Text color: <input type="color" placeholder="Text color"></span><br><br>
+        <input id="name" type="text" placeholder="Your name here" v-model="username" @keydown="updateCanvas">
+      </center>
+
+      {{username}}
+
+      <br><br>
+
+      <div id="canvas-wrap">
+        <canvas id="preview" width="1000px" height="300px"></canvas>
+      </div>
+
+      <br>
+
+      <img id="preview-img">
     
-    <h1>
-      GitHub Profile README <br> Header Image Generator
-    </h1>
-    
-    <p style="text-align: center;">
-      Generate header images for your GitHub profile READMEs.
-    </p>
-    
-    <br><br>
-    
-    <center>
-      <span class="color">Background color: <input type="color" placeholder="Background color"></span><br><br>
-      <span class="color">Text color: <input type="color" placeholder="Text color"></span><br><br>
-      <input id="name" type="text" placeholder="Your name here">
-    </center>
-    
-    <br><br>
-    
-    <div id="canvas-wrap">
-      <canvas id="preview" width="1000px" height="300px"></canvas>
     </div>
-    
-    <br>
-    
-    <img id="preview-img">
-    
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </body>
 </html>
