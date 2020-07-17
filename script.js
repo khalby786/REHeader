@@ -18,12 +18,18 @@ var app = new Vue({
       ctx.fillStyle = this.background;
       ctx.fillRect(0, 0, c.width, c.height);
 
-      ctx.fillStyle = "black";
+      ctx.fillStyle = this.color;
       ctx.font = "40px Arial";
       ctx.fillText("Hi 👋, I'm", x, y);
 
       ctx.font = "bold 70px Arial";
       ctx.fillText(this.username, x-3, y+70);
+    },
+    updateColor() {
+      this.color = document.getElementById("color").value;
+    },
+    updateBackground() {
+      this.color = document.getElementById("background").value;
     }
   }
 })
