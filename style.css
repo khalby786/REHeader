@@ -9,7 +9,17 @@ body {
 }
 
 h1 {
-  t
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 24px;
+}
+
+input {
+  
 }
 
 #canvas-wrap {
