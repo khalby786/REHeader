@@ -18,8 +18,24 @@ p {
   line-height: 24px;
 }
 
-input {
-  
+#name {
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "segoe ui", "Inter", "Helvetica", "Arial", sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+  width: 80%;
+  margin: auto;
+  max-width: 580px;
+  padding: 10px 20px;
+  border-radius: 3px;
+  margin-top: 0px;
+  border: 1px solid black;
+}
+
+.color {
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "segoe ui", "Inter", "Helvetica", "Arial", sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: 1px solid black;
 }
 
 #canvas-wrap {
