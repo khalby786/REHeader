@@ -5,11 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Hello!</title>
+    <!-- Primary Meta Tags -->
+    <title>GitHub Profile README Header Image Generator</title>
+    <meta name="title" content="GitHub Profile README Header Image Generator">
+    <meta name="description" content="Generate beautiful header images for your GitHub profile READMEs.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gh-readme-header-image-gen.glitch.me/">
+    <meta property="og:title" content="GitHub Profile README Header Image Generator">
+    <meta property="og:description" content="Generate beautiful header images for your GitHub profile READMEs.">
+    <meta property="og:image" content="https://cdn.glitch.com/0a4f672e-7d5c-4254-8f5a-847c2924bdf6%2FScreen%20Shot%202020-07-17%20at%205.19.18%20PM.png?v=1594991994508">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gh-readme-header-image-gen.glitch.me/">
+    <meta property="twitter:title" content="GitHub Profile README Header Image Generator">
+    <meta property="twitter:description" content="Generate beautiful header images for your GitHub profile READMEs.">
+    <meta property="twitter:image" content="https://cdn.glitch.com/0a4f672e-7d5c-4254-8f5a-847c2924bdf6%2FScreen%20Shot%202020-07-17%20at%205.19.18%20PM.png?v=1594991994508">
     
     <link rel="stylesheet" href="/style.css">
   </head>  
   <body>
+    
+    <a href="https://github.com/khalby786/gh-readme-header-image-gen"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" style="float: right;position:absolute;right:20px;top:20px;cursor:pointer;" width="70px"></a>
+    
     <div id="app">
   
       <h1>
@@ -24,7 +44,7 @@
 
       <center>
         <span class="color">Intro text color: <input type="color" placeholder="Intro text color" :value="introcolor" id="introcolor" @change="updateIntroColor" /></span><br><br>
-        <input id="introtext" type="text" placeholder="Intro text" v-model="introtext" @keyup="updateCanvas" /><br><br>
+        <input id="introtext" type="text" placeholder="Intro text" v-model="introtext" @keyup="updateCanvas" /><br><br><br>
         <span class="color">Background color: <input type="color" placeholder="Background color" :value="background" id="background" @change="updateBackground" /></span><br><br>
         <span class="color">Text color: <input type="color" placeholder="Text color" :value="color" id="color" @change="updateColor" /></span><br><br>
         <input id="name" type="text" placeholder="Your name here" v-model="username" @keyup="updateCanvas" />
@@ -47,12 +67,16 @@
 
       <br>
       
-      <p>
+      <p id="generated-prompt">
         Generated image:
       </p>
 
       <img id="preview-img">
     
+      <center>
+        Made with <span class="heart">❤</span> by Khaleel Gibran
+      </center>
+      
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

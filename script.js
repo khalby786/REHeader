@@ -9,6 +9,24 @@ var app = new Vue({
       introtext: "Hi 👋, I'm"
     }
   },
+  mounted: function() {
+    var c = document.getElementById("preview");
+    var ctx = c.getContext("2d");
+
+    let x = 70;
+    let y = 120;
+      
+    ctx.fillStyle = this.background;
+    ctx.fillRect(0, 0, c.width, c.height);
+
+    ctx.fillStyle = this.introcolor;
+    ctx.font = "40px Arial";
+    ctx.fillText(this.introtext, x, y);
+      
+    ctx.fillStyle = this.color;
+    ctx.font = "bold 70px Arial";
+    ctx.fillText(this.username, x-3, y+70);
+  },
   methods: {
     updateCanvas() {
       var c = document.getElementById("preview");
@@ -41,8 +59,9 @@ var app = new Vue({
       var canvas = document.getElementById("preview");
       var img = canvas.toDataURL("image/png");
       document.getElementById('preview-img').src = img;
+      document.getElementById('generated-prompt').style.display = "block";
     }
-  }
+  },
 })
 
 function save() {

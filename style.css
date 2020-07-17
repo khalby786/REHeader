@@ -76,3 +76,9 @@ button:active {
   color: black;
   transition: 150ms;
 }
+
+#generated-prompt {
+  display: none;
+}
+
+.heart{color:#e25555;}
