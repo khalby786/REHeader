@@ -32,9 +32,13 @@
       
       <br><br>
       
-      <
+      <center>
+        <button @click="updateCanvas">
+          Refresh
+        </button>
+      </center>
 
-      <div id="canvas-wrap">
+      <div id="canvas-wrap" @load="updateCanvas">
         <canvas id="preview" width="1000px" height="300px"></canvas>
       </div>
 

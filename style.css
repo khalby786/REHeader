@@ -53,3 +53,26 @@ p {
 #canvas-wrap {
   overflow: auto;
 }
+
+button {
+  border: 1px solid black;
+  padding: 10px 20px;
+  border-radius: 9px;
+  background-color: var(--primary);
+  font-size: 16px;
+  transition: 150ms;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  transition: 150ms;
+}
+
+button:active {
+  background-color: yellow;
+  color: black;
+  transition: 150ms;
+}
