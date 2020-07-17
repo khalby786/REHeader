@@ -36,6 +36,11 @@ var app = new Vue({
     },
     updateIntroColor() {
       this.introcolor = document.getElementById("introcolor").value;
+    },
+    updateImage() {
+      var canvas = document.getElementById("preview");
+      var img = canvas.toDataURL("image/png");
+      document.getElementById('preview-img').src = img;
     }
   }
 })

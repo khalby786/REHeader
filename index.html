@@ -36,6 +36,9 @@
         <button @click="updateCanvas">
           Refresh
         </button>
+        <button @click="updateImage">
+          Generate Image
+        </button>
       </center>
 
       <div id="canvas-wrap" @load="updateCanvas">
@@ -43,6 +46,10 @@
       </div>
 
       <br>
+      
+      <p>
+        Generated image:
+      </p>
 
       <img id="preview-img">
     
