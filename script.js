@@ -2,9 +2,9 @@ var app = new Vue({
   el: '#app',
   data: function() {
     return {
-      color: "black",
-      background: "white",
-      username: "User"
+      color: "#000000",
+      background: "#ffffff",
+      username: "Octocat"
     }
   },
   methods: {
@@ -27,7 +27,7 @@ var app = new Vue({
     }
   },
   created: function() {
-    this.updateCanvas();
+    updateCanvas();
   }
 })
 

@@ -8,9 +8,6 @@
     <title>Hello!</title>
     
     <link rel="stylesheet" href="/style.css">
-    
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="/script.js"></script>
   </head>  
   <body>
     <div id="app">
@@ -26,12 +23,10 @@
       <br><br>
 
       <center>
-        <span class="color">Background color: <input type="color" placeholder="Background color"></span><br><br>
-        <span class="color">Text color: <input type="color" placeholder="Text color"></span><br><br>
-        <input id="name" type="text" placeholder="Your name here" v-model="username" @keydown="updateCanvas">
+        <span class="color">Background color: <input type="color" placeholder="Background color" :value="background"></span><br><br>
+        <span class="color">Text color: <input type="color" placeholder="Text color" :value="color"></span><br><br>
+        <input id="name" type="text" placeholder="Your name here" v-model="username" @keyup="updateCanvas">
       </center>
-
-      {{username}}
 
       <br><br>
 
@@ -44,5 +39,8 @@
       <img id="preview-img">
     
     </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>
