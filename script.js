@@ -2,8 +2,8 @@ var app = new Vue({
   el: '#app',
   data: function() {
     return {
-      color: "#000000",
-      background: "#ffffff",
+      color: "#1c1c1b",
+      background: "#fcfcfc",
       username: "Octocat"
     }
   },
@@ -25,16 +25,8 @@ var app = new Vue({
       ctx.font = "bold 70px Arial";
       ctx.fillText(this.username, x-3, y+70);
     }
-  },
-  created: function() {
-    updateCanvas();
   }
 })
-
-
-function updateCanvas() {
-  
-}
 
 function save() {
   var canvas = document.getElementById("preview");
