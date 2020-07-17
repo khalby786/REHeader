@@ -15,7 +15,7 @@ ctx.font = "bold 70px Arial";
 ctx.fillText("Khaleel Gibran 🍩", x-3, y+70);
 
 function save() {
-  var canvas = document.getElementById("mycanvas");
+  var canvas = document.getElementById("preview");
   var img = canvas.toDataURL("image/png");
-  document.getElementById('preview-img').href = img;
+  document.getElementById('preview-img').src = img;
 }
