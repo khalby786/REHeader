@@ -55,15 +55,15 @@
       <br><br>
       
       <center>
-        <button @click="updateCanvas">
+        <!-- <button @click="updateCanvas">
           Refresh
-        </button>
+        </button> -->
         <button @click="updateImage">
           Generate Image
         </button>
       </center>
 
-      <div id="canvas-wrap" @load="updateCanvas">
+      <div id="wrap" @load="updateCanvas">
         <canvas id="preview" width="1000px" height="300px"></canvas>
       </div>
 
@@ -73,7 +73,9 @@
         Generated image:
       </p>
 
-      <img id="preview-img">
+      <div id="wrap">
+        <img id="preview-img">
+      </div>
     
       <center>
         Made with <span class="heart">❤</span> by Khaleel Gibran
