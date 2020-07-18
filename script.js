@@ -3,7 +3,7 @@ var app = new Vue({
   data: function() {
     return {
       color: "#1c1c1b",
-      background: "#fcfcfc",
+      background: "#db7b7b",
       username: "Octocat",
       introcolor: "#1c1c1b",
       introtext: "Hi 👋, I'm"
@@ -48,12 +48,15 @@ var app = new Vue({
     },
     updateColor() {
       this.color = document.getElementById("color").value;
+      this.updateCanvas();
     },
     updateBackground() {
       this.background = document.getElementById("background").value;
+      this.updateCanvas();
     },
     updateIntroColor() {
       this.introcolor = document.getElementById("introcolor").value;
+      this.updateCanvas();
     },
     updateImage() {
       var canvas = document.getElementById("preview");

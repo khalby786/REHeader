@@ -1,11 +1,18 @@
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-right: 20px;
   padding-left: 20px;
   padding-top: 50px;
-  max-width: 580px;
-  margin: auto;
+  /* max-width: 580px; */
+  /* margin: auto; */
   margin-bottom: 100px;
   font-family: -apple-system, BlinkMacSystemFont, "segoe ui", "Inter", "Helvetica", "Arial", sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+}
+
+#app {
+  width: 100%;
 }
 
 h1 {
@@ -50,8 +57,9 @@ p {
   border: 1px solid black;
 }
 
-#canvas-wrap {
+#wrap {
   overflow: auto;
+  text-align: center;
 }
 
 button {
