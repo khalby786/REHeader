@@ -17,5 +17,6 @@
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/hello-express"
-  }
+  },
+  "license": "MIT"
 }
