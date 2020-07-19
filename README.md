@@ -1,4 +1,6 @@
-# GitHub Profile README Header Image Generator
+# REHeader
+
+GitHub Profile README Header Image Generator
 
 *That's a very long name. By the time I finish reading the title, a whole day will be over.*
 

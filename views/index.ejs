@@ -6,28 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Primary Meta Tags -->
-    <title>GitHub Profile README Header Image Generator</title>
+    <title>REHeader</title>
     <meta name="title" content="GitHub Profile README Header Image Generator">
     <meta name="description" content="Generate beautiful header images for your GitHub profile READMEs.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gh-readme-header-image-gen.glitch.me/">
+    <meta property="og:url" content="https://reheader.glitch.me/">
     <meta property="og:title" content="GitHub Profile README Header Image Generator">
     <meta property="og:description" content="Generate beautiful header images for your GitHub profile READMEs.">
     <meta property="og:image" content="https://cdn.glitch.com/0a4f672e-7d5c-4254-8f5a-847c2924bdf6%2FScreen%20Shot%202020-07-17%20at%205.19.18%20PM.png?v=1594991994508">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://gh-readme-header-image-gen.glitch.me/">
+    <meta property="twitter:url" content="https://reheader.glitch.me/">
     <meta property="twitter:title" content="GitHub Profile README Header Image Generator">
     <meta property="twitter:description" content="Generate beautiful header images for your GitHub profile READMEs.">
     <meta property="twitter:image" content="https://cdn.glitch.com/0a4f672e-7d5c-4254-8f5a-847c2924bdf6%2FScreen%20Shot%202020-07-17%20at%205.19.18%20PM.png?v=1594991994508">
     
     <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Fira+Mono&family=IBM+Plex+Mono&family=Inter&family=PT+Serif&family=Playfair+Display&family=Red+Rose&family=Roboto&display=swap" rel="stylesheet">
   </head>  
   <body>
     
+    <img src="<%= avatar %>" style="border-radius:50%;width:50px;float:right;position:absolute;right:100px;top:30px;">
     <a href="https://github.com/khalby786/gh-readme-header-image-gen"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" style="float: right;position:absolute;right:20px;top:20px;cursor:pointer;" width="70px"></a>
     
     <br><br>
@@ -35,7 +37,7 @@
     <div id="app">
   
       <h1>
-        GitHub Profile README <br> Header Image Generator
+        REHeader
       </h1>
 
       <p style="text-align: center;">
@@ -45,6 +47,7 @@
       <br><br>
 
       <center>
+<!--         <select name="fonts" id="fonts1"></select> -->
         <span class="color">Intro text color: <input type="color" placeholder="Intro text color" :value="introcolor" id="introcolor" @change="updateIntroColor" /></span><br><br>
         <input id="introtext" type="text" placeholder="Intro text" v-model="introtext" @keyup="updateCanvas" /><br><br><br>
         <span class="color">Background color: <input type="color" placeholder="Background color" :value="background" id="background" @change="updateBackground" /></span><br><br>
@@ -63,22 +66,52 @@
         </button>
       </center>
 
-      <div id="wrap" @load="updateCanvas">
+      <div id="canvas-wrap" @load="updateCanvas">
         <canvas id="preview" width="1000px" height="300px"></canvas>
       </div>
 
       <br>
-      
-      <p id="generated-prompt">
-        Generated image:
-      </p>
 
       <div id="wrap">
+        <p id="generated-prompt">
+          Generated image:
+        </p>
         <img id="preview-img">
       </div>
+      
+      <br><br>
+      
+      <p id="steps-prompt">
+        Now, that you've generated the image,
+      </p>
+      
+        <ol id="steps">
+          <li>Right click on the image and save it.</li>
+          <li>Go to <a href="https://ghreadmeheaderimg.glitch.me"><code>https://ghreadmeheaderimg.glitch.me</code></a> and upload the image that you saved.</li>
+          <li>Make sure to copy the link provided once you've uploaded the image there and then you can happily use it in your README!</li>
+        </ol>
+      
+      <center id="add-to-github">
+        
+        <canvas id="base64-preview" style="display: none"></canvas>
+        
+        <p style="margin-bottom:3px;">
+          <b>Add To Your GitHub README Repo</b>
+        </p>
+        <button id="upload-github" @click="githubupload">
+          Add to <span class="code"><%= user %>/<%= user %></span>
+        </button>
+        <br>Please make sure that the repo <span class="code"><%= user %>/<%= user %></span> exists or else it might not work as intended.
+      </center>
     
+      <br><br>
+      
       <center>
         Made with <span class="heart">❤</span> by Khaleel Gibran
+        
+        <br><br>
+        
+        <a href="/logout"><span class="code">Logout</span></a>
       </center>
       
     </div>
@@ -87,3 +120,4 @@
     <script src="/script.js"></script>
   </body>
 </html>
+
