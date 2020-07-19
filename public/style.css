@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Fira+Mono&family=IBM+Plex+Mono&family=Inter&family=PT+Serif&family=Playfair+Display&family=Red+Rose&family=Roboto&display=swap');
+
 body {
   display: flex;
   flex-direction: column;
@@ -57,6 +59,11 @@ p {
   border: 1px solid black;
 }
 
+#canvas-wrap {
+  overflow: auto;
+  text-align: center;
+}
+
 #wrap {
   overflow: auto;
   text-align: center;
@@ -89,4 +96,34 @@ button:active {
   display: none;
 }
 
-.heart{color:#e25555;}
+#steps-prompt {
+  display: none;
+  overflow: auto;
+}
+
+#steps {
+  display: none;
+  overflow: auto;
+}
+
+.heart{
+  color:#e25555;
+}
+
+a {
+  text-decoration: none;
+}
+
+.code {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+#add-to-github {
+  background-color: yellow;
+  border-radius: 5px;
+  border: 1px solid black;
+  max-width: 580px;
+  margin: auto;
+  padding: 10px 20px;
+  display: none;
+}
